@@ -8,6 +8,8 @@ Please make sure Flutter is installed to your local machine. Then clone the repo
 git clone https://github.com/PrecisionReporters/flutter_interview_challenges.git
 ```
 
+To switch between each challenge, modify the `main.dart` challenge Widget. It starts at `ChallengeZero()` which contains some helpful information for getting started.
+
 ## Screenshots
 
 ![Flutter Interview Challenges - Google Chrome 8_15_2024 11_53_15 AM](https://github.com/user-attachments/assets/c1d97c59-e01e-4cd9-acfb-bee0e42507d7)
