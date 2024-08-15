@@ -7,3 +7,7 @@ Please make sure Flutter is installed to your local machine. Then clone the repo
 ```sh
 git clone https://github.com/PrecisionReporters/flutter_interview_challenges.git
 ```
+
+## Screenshots
+
+![Flutter Interview Challenges - Google Chrome 8_15_2024 11_53_15 AM](https://github.com/user-attachments/assets/c1d97c59-e01e-4cd9-acfb-bee0e42507d7)
