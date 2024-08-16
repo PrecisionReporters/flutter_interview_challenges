@@ -11,9 +11,9 @@ class ChallengeFourWorkspace extends StatelessWidget {
       child: const Stack(
         children: [
           Align(),
+          FinishLine(),
           Tortoise(),
           Hare(),
-          FinishLine(),
         ],
       ),
     );
