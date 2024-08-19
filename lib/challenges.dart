@@ -4,7 +4,9 @@ import 'package:flutter_interview_challenges/workspace/a0.dart';
 import 'package:flutter_interview_challenges/workspace/c2.dart';
 import 'package:flutter_interview_challenges/workspace/d3.dart';
 import 'package:flutter_interview_challenges/workspace/e4.dart';
+import 'package:flutter_interview_challenges/workspace/g6.dart';
 import 'package:flutter_interview_challenges/workspace/f5.dart';
+import 'package:flutter_interview_challenges/workspace/h7.dart';
 
 class ChallengeZero extends StatelessWidget {
   const ChallengeZero({super.key});
@@ -105,9 +107,41 @@ class ChallengeFive extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const ChallengeContainer(
-      title: 'Challenge Five - Freestyle',
-      instructions: 'Build a clock that tells the current time.',
+      title: 'Challenge Five - Prime Performance',
+      instructions: 'Something is wrong with this prime number generator. Over '
+          'time, the app\'s UI is losing FPS and slowly becoming unresponsive. '
+          'Please restore the performance so the user has a consistent frame '
+          'rate. For modern web, target 60 frames per second.\n\n'
+          'But continue to generate prime numbers as quickly as possible.',
       child: ChallengeFiveWorkspace(),
+    );
+  }
+}
+
+class ChallengeSix extends StatelessWidget {
+  const ChallengeSix({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const ChallengeContainer(
+      title: 'Challenge Six - New Yorker\'s Forecast',
+      instructions: 'Please use https://api.weather.gov to fetch the current '
+          'weather in New York City (40.7128° lat, -74.008° long). Display the '
+          'current temperature in either Celsius or Fahrenheit on screen.',
+      child: ChallengeSixWorkspace(),
+    );
+  }
+}
+
+class ChallengeSeven extends StatelessWidget {
+  const ChallengeSeven({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const ChallengeContainer(
+      title: 'Challenge Seven - Creativity',
+      instructions: 'Build a clock that tells the current time.',
+      child: ChallengeSevenWorkspace(),
     );
   }
 }
@@ -146,7 +180,7 @@ class ChallengeContainer extends StatelessWidget {
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
                   const SizedBox(height: 4),
-                  Text(
+                  SelectableText(
                     instructions,
                     style: Theme.of(context).textTheme.bodyLarge,
                   ),
