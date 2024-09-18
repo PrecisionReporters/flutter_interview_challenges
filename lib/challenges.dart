@@ -4,8 +4,8 @@ import 'package:flutter_interview_challenges/workspace/a0.dart';
 import 'package:flutter_interview_challenges/workspace/c2.dart';
 import 'package:flutter_interview_challenges/workspace/d3.dart';
 import 'package:flutter_interview_challenges/workspace/e4.dart';
-import 'package:flutter_interview_challenges/workspace/g6.dart';
 import 'package:flutter_interview_challenges/workspace/f5.dart';
+import 'package:flutter_interview_challenges/workspace/g6.dart';
 import 'package:flutter_interview_challenges/workspace/h7.dart';
 
 class ChallengeZero extends StatelessWidget {
@@ -24,10 +24,13 @@ class ChallengeZero extends StatelessWidget {
           'you find helpful. But, do not directly look up the answers to these '
           'specific challenges. Share your computer screen for the full duration '
           'of the challenges.\n\n'
-          'All challenges will run off of web. You may import and use libraries '
-          'from pub.dev, but they must support web. We will not be testing iOS '
-          'or Android. If you get stuck on a challenge, feel free to move to '
-          'the next one. If time allows, we can return to former challenges later.',
+          'You may choose any build target platform to run the program, so long '
+          'as the product can be seen on the share screen. Your solutions must '
+          'compile, run, and be successful on at least one target platform. You '
+          'may import and use any library from pub.dev, but all challenges can '
+          'be completed without additional imports. If you get stuck on a '
+          'challenge, feel free to move to the next one. If time allows, you can '
+          'return to former challenges later.',
       child: ChallengeZeroWorkspace(),
     );
   }
@@ -107,12 +110,10 @@ class ChallengeFive extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const ChallengeContainer(
-      title: 'Challenge Five - Prime Performance',
-      instructions: 'Something is wrong with this prime number generator. Over '
-          'time, the app\'s UI is losing FPS and slowly becoming unresponsive. '
-          'Please restore the performance so the user has a consistent frame '
-          'rate. For modern web, target 60 frames per second.\n\n'
-          'But continue to generate prime numbers as quickly as possible.',
+      title: 'Challenge Five - New Yorker\'s Forecast',
+      instructions: 'Please use https://api.weather.gov to fetch the current '
+          'weather in New York City (40.7128° lat, -74.008° long). Display the '
+          'current temperature in either Celsius or Fahrenheit on screen.',
       child: ChallengeFiveWorkspace(),
     );
   }
@@ -124,10 +125,13 @@ class ChallengeSix extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const ChallengeContainer(
-      title: 'Challenge Six - New Yorker\'s Forecast',
-      instructions: 'Please use https://api.weather.gov to fetch the current '
-          'weather in New York City (40.7128° lat, -74.008° long). Display the '
-          'current temperature in either Celsius or Fahrenheit on screen.',
+      title: 'Challenge Six - Prime Performance',
+      instructions: 'Something is wrong with this prime number generator. Over '
+          'time, the app\'s UI is losing FPS and slowly becoming unresponsive. '
+          'Please restore the performance so the user has a consistent frame '
+          'rate, but continue to generate prime numbers as quickly as possible.\n\n'
+          'Your computer\'s frame rate will vary, but consistency is what we\'re '
+          'looking for!',
       child: ChallengeSixWorkspace(),
     );
   }
