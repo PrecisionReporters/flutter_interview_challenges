@@ -7,11 +7,7 @@ class ChallengeSixWorkspace extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        FramesPerSecondCounter(),
-        SizedBox(height: 16),
-        NthPrime(),
-      ],
+      children: [FramesPerSecondCounter(), SizedBox(height: 16), NthPrime()],
     );
   }
 }
@@ -57,20 +53,30 @@ class _NthPrimeState extends State<NthPrime> {
 }
 
 bool isPrime(int number) {
-  if (number <= 1) return false;
-  if (number <= 3) return true;
-  if (number % 2 == 0 || number % 3 == 0) return false;
-  for (int i = 5; i * i <= number; i += 6) {
-    if (number % i == 0 || number % (i + 2) == 0) return false;
+  if (number <= 1) {
+    return false;
+  }
+  if (number <= 3) {
+    return true;
+  }
+  if (number % 2 == 0 || number % 3 == 0) {
+    return false;
+  }
+  for (var i = 5; i * i <= number; i += 6) {
+    if (number % i == 0 || number % (i + 2) == 0) {
+      return false;
+    }
   }
   return true;
 }
 
 int nthPrime(int n) {
-  if (n <= 0) throw ArgumentError('n must be a positive integer.');
+  if (n <= 0) {
+    throw ArgumentError('n must be a positive integer.');
+  }
 
-  int count = 0;
-  int num = 1;
+  var count = 0;
+  var num = 1;
 
   while (count < n) {
     num++;
@@ -104,15 +110,17 @@ class _FramesPerSecondCounterState extends State<FramesPerSecondCounter> {
 
   @override
   Widget build(BuildContext context) {
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {
-          if (_stopwatch.elapsedMilliseconds > 1000) {
-            _lastMeasuredFps = _currentFrame;
-            _currentFrame = 0;
-            _stopwatch.reset();
-          } else {
-            _currentFrame++;
-          }
-        }));
+    WidgetsBinding.instance.addPostFrameCallback(
+      (_) => setState(() {
+        if (_stopwatch.elapsedMilliseconds > 1000) {
+          _lastMeasuredFps = _currentFrame;
+          _currentFrame = 0;
+          _stopwatch.reset();
+        } else {
+          _currentFrame++;
+        }
+      }),
+    );
     return Text(
       'FPS      ${_lastMeasuredFps.toString().padLeft(2, '0')}\n'
       'Frame  ${_currentFrame.toString().padLeft(2, '0')}',

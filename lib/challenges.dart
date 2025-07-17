@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_interview_challenges/workspace/b1.dart';
 import 'package:flutter_interview_challenges/workspace/a0.dart';
+import 'package:flutter_interview_challenges/workspace/b1.dart';
 import 'package:flutter_interview_challenges/workspace/c2.dart';
 import 'package:flutter_interview_challenges/workspace/d3.dart';
 import 'package:flutter_interview_challenges/workspace/e4.dart';
@@ -111,7 +111,8 @@ class ChallengeFive extends StatelessWidget {
   Widget build(BuildContext context) {
     return const ChallengeContainer(
       title: 'Challenge Five - New Yorker\'s Forecast',
-      instructions: 'Please use https://api.weather.gov to fetch the current '
+      instructions:
+          'Please use https://api.weather.gov to fetch the current '
           'weather in New York City (40.7128° lat, -74.008° long). Display the '
           'current temperature in either Celsius or Fahrenheit on screen.',
       child: ChallengeFiveWorkspace(),
@@ -126,7 +127,8 @@ class ChallengeSix extends StatelessWidget {
   Widget build(BuildContext context) {
     return const ChallengeContainer(
       title: 'Challenge Six - Prime Performance',
-      instructions: 'Something is wrong with this prime number generator. Over '
+      instructions:
+          'Something is wrong with this prime number generator. Over '
           'time, the app\'s UI is losing FPS and slowly becoming unresponsive. '
           'Please restore the performance so the user has a consistent frame '
           'rate, but continue to generate prime numbers as quickly as possible.\n\n'
@@ -192,9 +194,7 @@ class ChallengeContainer extends StatelessWidget {
               ),
             ),
             const Divider(),
-            Expanded(
-              child: child,
-            ),
+            Expanded(child: child),
           ],
         ),
       ),

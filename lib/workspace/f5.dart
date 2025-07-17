@@ -20,7 +20,7 @@ class NewYorkTemperature extends StatefulWidget {
 }
 
 class _NewYorkTemperatureState extends State<NewYorkTemperature> {
-  bool _isLoading = true;
+  final _isLoading = true;
 
   @override
   void initState() {
